@@ -24,7 +24,7 @@ dependencies {
     testImplementation(project(":core:testing"))
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.pagination)
+    implementation(libs.androidx.paging)
 
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.coroutines.android)

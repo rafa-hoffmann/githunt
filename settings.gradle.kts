@@ -40,4 +40,6 @@ include(":core:model")
 include(":core:network")
 include(":core:testing")
 
+include(":feature:repository-list")
+
 include(":ui-test-hilt-manifest")

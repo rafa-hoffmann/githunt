@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    tools:theme="@style/Theme.Material3.DayNight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/repository_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toTopOf="@id/star_count"
+            app:layout_constraintEnd_toStartOf="@id/repository_end"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="JetBrains/kotlin" />
+
+        <ImageView
+            android:id="@+id/iv_star"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repository_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/star_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/iv_star"
+            app:layout_constraintStart_toEndOf="@id/iv_star"
+            app:layout_constraintTop_toTopOf="@id/iv_star"
+            tools:text="5000" />
+
+        <ImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_fork"
+            app:layout_constraintStart_toEndOf="@id/star_count"
+            app:layout_constraintTop_toTopOf="@id/iv_star" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fork_count"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/iv_fork"
+            app:layout_constraintEnd_toStartOf="@id/repository_end"
+            app:layout_constraintStart_toEndOf="@id/iv_fork"
+            app:layout_constraintTop_toTopOf="@id/iv_fork"
+            tools:text="2500" />
+
+        <ImageView
+            android:id="@+id/owner_avatar"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toTopOf="@id/owner_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repository_end"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/owner_image_preview" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/owner_name"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repository_end"
+            app:layout_constraintTop_toBottomOf="@id/owner_avatar"
+            tools:text="JetBrains" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/repository_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
