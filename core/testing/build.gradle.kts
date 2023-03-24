@@ -20,6 +20,7 @@ dependencies {
     api(libs.turbine)
 
     api(libs.androidx.test.espresso.core)
+    api(libs.androidx.test.paging)
     api(libs.androidx.test.runner)
     api(libs.androidx.test.rules)
     api(libs.hilt.android.testing)

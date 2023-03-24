@@ -17,11 +17,8 @@ android {
 dependencies {
     implementation(project(":core:model"))
 
-    implementation(libs.androidx.pagination)
-
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.datetime)
-    implementation(libs.room.paging)
 
     androidTestImplementation(project(":core:testing"))
 }

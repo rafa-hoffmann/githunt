@@ -51,6 +51,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", libs.findLibrary("androidx.core.ktx").get())
                 add("implementation", libs.findLibrary("androidx.navigation.fragment.ktx").get())
                 add("implementation", libs.findLibrary("androidx.navigation.ui").get())
+                add("implementation", libs.findLibrary("androidx.paging").get())
                 add("implementation", libs.findLibrary("material").get())
 
                 add("testImplementation", kotlin("test"))

@@ -52,6 +52,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:repository-list"))
 
     implementation(project(":core:common"))
     implementation(project(":core:data"))
